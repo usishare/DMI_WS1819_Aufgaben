@@ -7,6 +7,7 @@
 *.lof
 *.log
 *.lot
+*.out
 *.swp
 *.thm
 *.toc
