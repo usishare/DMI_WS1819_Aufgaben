@@ -1,0 +1,17 @@
+*.aux
+*.bbl
+*.blg
+*.idx
+*.ilg
+*.ind
+*.lof
+*.log
+*.lot
+*.swp
+*.thm
+*.toc
+*.synctex.gz
+dmi.pdf
+glyph2code
+makefile
+

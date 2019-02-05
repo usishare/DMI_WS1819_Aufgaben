@@ -1,0 +1,441 @@
+% layout and global options
+\documentclass
+[
+  draft    = true,
+  fontsize = 11pt,
+  parskip  = half-,
+  BCOR     = 0pt,
+  DIV      = 11,
+  ngerman,
+  dvipsnames
+]
+{scrartcl}
+
+% default packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{babel}
+% extra packages
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{ifthen}
+\usepackage{siunitx}
+\usepackage{tikz}
+\usepackage{url}
+
+% basic calculations in TikZ
+\usetikzlibrary{calc}
+
+% use comma as decimal separator
+\sisetup{locale=DE, group-minimum-digits=4}
+
+% ------------------------------------------------------------------------------
+\begin{document}
+% ------------------------------------------------------------------------------
+
+\tableofcontents
+
+% -----------------------------------------
+\section{Aussagenlogik und Prädikatenlogik}
+% -----------------------------------------
+
+% ----------------------------
+\paragraph{Übung 1: Aufgabe 1}
+% ----------------------------
+Sind die folgenden Aussagen im logischen Sinne wahr oder falsch?
+
+% ----------------------------
+\paragraph{Übung 2: Aufgabe 3}
+% ----------------------------
+Drücken Sie die folgenden Aussagen in Prädikatenlogik über den natürlichen
+Zahlen ohne Null $(\mathbb{N}_{>0})$ aus. Dabei stehen Ihnen als zwei stellige
+Funktionssymbole $+$ und $\cdot$ sowie das zweistellige Prädikat $=$ mit jeweils
+den üblichen Bedeutungen zur Verfügung.
+
+% ------------------------
+\section{Beweisprinzipien}
+% ------------------------
+
+% ----------------------------
+\paragraph{Übung 5: Aufgabe 1}
+% ----------------------------
+Beweisen Sie die folgenden Aussagen mittels vollständiger Induktion über
+$n$
+
+% -------------------------------------
+\section{Mengentheoretische Grundlagen}
+% -------------------------------------
+
+% ----------------------------
+\paragraph{Übung 1: Aufgabe 2}
+% ----------------------------
+Bestimmen Sie die folgenden Mengen
+
+% ----------------------------
+\paragraph{Übung 2: Aufgabe 1}
+% ----------------------------
+Bestimmen Sie die folgenden Mengen
+
+% ----------------------------
+\paragraph{Übung 3: Aufgabe 1}
+% ----------------------------
+Bestimmen Sie, ob es sich bei den folgenden Relationen um Funktionen
+handelt. Geben Sie außerdem fur die gefundenen Funktionen das Bild der
+Funktion an.
+
+% ----------------------------
+\paragraph{Übung 3: Aufgabe 2}
+% ----------------------------
+Geben Sie eine Bijektion von A nach B an.
+
+% ----------------------------
+\paragraph{Übung 3: Aufgabe 3}
+% ----------------------------
+Bestimmen Sie, ob folgende Funktionen injektiv bzw. surjektiv sind
+
+% ----------------------------
+\paragraph{Übung 4: Aufgabe 1}
+% ----------------------------
+Bestimmen Sie, ob folgende Relationen reflexiv, irreflexiv, symmetrisch,
+antisymmetrisch bzw. transitiv sind
+
+% ----------------------------
+\paragraph{Übung 4: Aufgabe 2}
+% ----------------------------
+Bestimmen Sie die Äquivalenzklassen der folgenden Relationen
+
+% --------------------
+\section{Kombinatorik}
+% --------------------
+
+% ------------------------------
+\subsection{Abzählen von Mengen}
+% ------------------------------
+
+% ----------------------------
+\paragraph{Übung 6: Aufgabe 1}
+% ----------------------------
+\begin{enumerate}[a)]
+  \item Bestimmen Sie die Menge aller möglichen Wörter der Länge $n$ über einem Alphabet mit $k$ Buchstaben.
+  \item An einem Marathon nehmen 20 Läufer teil. In wie vielen verschiedenen Reihenfolgen können die Läufer das Ziel erreichen?
+  \item Wie viele verschiedene mögliche Zahlenkombinationen können bei einer Lottoziehung (6 aus 49) gezogen werden?
+  \item Wie viele verschiedene Notenverteilungen können entstehen, wenn bei einer Klausur 20 Studenten mitschreiben?
+  \item Aus einer Schulklasse von 23 Schülern soll eine Gruppe von 5 Schülern zum Direktor geschickt werden. Auf wie viele Arten kann diese Abordnung gebildet werden?
+  \item In einem Zimmer gibt es 5 Lampen, die unabhängig voneinander aus- und eingeschaltet werden können. Wie viele Arten der Beleuchtung gibt es insgesamt?
+  \item In einer Liga spielen 7 Mannschaften. Wie viele mögliche Tabellenkonstellationen gibt es?
+  \item Wie viele natürliche Zahlen können als Produkt von 10 Faktoren aus den Zahlen 1,2,3 und 4 dargestellt werden?
+\end{enumerate}
+
+% ----------------------------
+\paragraph{Übung 6: Aufgabe 2}
+% ----------------------------
+Bestimmen Sie
+\begin{equation*}
+  \text{a) }\binom{6}{2}
+  \qquad
+  \text{und}
+  \qquad
+  \text{b) }\binom{n}{2}\text{ für }n\in\mathbb{N}
+\end{equation*}
+
+% -------------------------------
+\subsection{Einfache Identitäten}
+% -------------------------------
+
+% ----------------------------
+\paragraph{Übung 6: Aufgabe 2}
+% ----------------------------
+Zeigen Sie, dass für alle $n,k\in\mathbb{N}$ folgende Gleichung gilt:
+\begin{equation*}
+  k\cdot\binom{n}{k}=n\cdot\binom{n-1}{k-1}
+\end{equation*}
+
+% ----------------------------
+\paragraph{Übung 7: Aufgabe 1}
+% ----------------------------
+Zeigen Sie, dass für alle $n\in\mathbb{N}$ folgende Gleichung gilt:
+\begin{equation*}
+  \sum_{i=0}^{n}\sum_{j=0}^{i}\binom{i}{j}=2^{n+1}-1
+\end{equation*}
+
+% ----------------------------------
+\subsection{Der Binomische Lehrsatz}
+% ----------------------------------
+
+% ----------------------------
+\paragraph{Übung 7: Aufgabe 2}
+% ----------------------------
+\begin{enumerate}[a)]
+  \item Lösen Sie die folgende Gleichung mit Hilfe des binomischen Lehrsatzes:
+        \begin{equation*}
+          x^3++3x^2+3x+1=8
+        \end{equation*}
+  \item Zeigen Sie, dass für $n\geq1$ folgende Gleichung erfüllt ist:
+        \begin{equation*}
+          \sum_{k=0}^{n}\binom{n}{k}(-1)^k=0
+        \end{equation*}
+\end{enumerate}
+
+% ----------------------
+\section{Graphentheorie}
+% ----------------------
+
+% ------------------------
+\subsection{Grundbegriffe}
+% ------------------------
+
+% ----------------------------
+\paragraph{Übung 7: Aufgabe 3}
+% ----------------------------
+Gegeben sei ein ungerichteter Graph
+\begin{equation*}
+  G=(\{1,2,3,4,5\},\{\{1,2\},\{1,4\},\{1,5\},\{2,3\},\{2,5\},\{3,4\}\}).
+\end{equation*}
+
+% ----------------------------
+\paragraph{Übung 7: Aufgabe 4}
+% ----------------------------
+Beweisen Sie, dass jeder ungerichtete Graph $G=(V,E)$ mit $|V|\geq2$
+mindestens 2 Knoten mit gleichem Grad hat!
+
+% ----------------------------
+\paragraph{Übung 7: Aufgabe 5}
+% ----------------------------
+Wie viele Graphen mit $n$ Knoten gibt es?
+
+% ----------------------------
+\paragraph{Übung 7: Aufgabe 6}
+% ----------------------------
+Beweisen Sie: $C_n$ ist bipartit genau dann, wenn $n$ gerade ist.
+
+% ----------------------------
+\paragraph{Übung 8: Aufgabe 3}
+% ----------------------------
+Sei $G$ ein Baum mit 6 Knoten. Wie viele Blätter kann $G$ enthalten?
+
+% ----------------------------
+\paragraph{Übung 8: Aufgabe 4}
+% ----------------------------
+Wie viele Kreise der Länge $r$ enthält der vollständige Graph $K_n$?
+
+% ----------------------------
+\paragraph{Übung 9: Aufgabe 5}
+% ----------------------------
+Sei $G$ ein Graph mit $n$ Knoten.
+\begin{enumerate}[a)]
+  \item Was ist die kleinste Anzahl an Kanten $m$, die man braucht, so dass $G$ zusammenhängend ist?
+  \item Wie viele Kanten muss $G$ mindestens haben, so dass $G$ in jedem Fall zusammenhängend ist?
+\end{enumerate}
+
+% --------------------------
+\subsection{Planare Graphen}
+% --------------------------
+
+% ----------------------------
+\paragraph{Übung 8: Aufgabe 1}
+% ----------------------------
+Zeichnen Sie die folgenden Graphen planar
+
+% ----------------------------
+\paragraph{Übung 8: Aufgabe 2}
+% ----------------------------
+Sei $G_{n,m}$ der Graph bestehend aus $n\cdot m$ Quadraten, wobei jeweils
+$n$ Quadrate untereinander und $m$ Quadrate nebeneinander liegen.
+Zusätzlich sind die beiden diagonal gegenüber liegenden Punkte in einem
+Quadrat miteinander verbunden.
+
+% --------------------
+\subsection{Färbungen}
+% --------------------
+
+% ----------------------------
+\paragraph{Übung 9: Aufgabe 2}
+% ----------------------------
+Beweisen Sie die folgenden Aussagen:
+
+% ----------------------------
+\paragraph{Übung 9: Aufgabe 3}
+% ----------------------------
+Gegeben sei folgender Graph G:
+Bestimmen Sie $\chi(G)$ und geben Sie eine 4-Färbung an.
+
+% ----------------------------
+\paragraph{Übung 9: Aufgabe 4}
+% ----------------------------
+Beweisen Sie: Für einen Graphen mit m Kanten gilt
+\begin{equation*}
+  \ldots
+\end{equation*}
+Hinweis: Nehmen Sie an, ihr Graph hat $\chi(G)$ Farbklassen. Was können
+Sie dann für die Anzahl der Kanten zwischen den Farbklassen folgern?
+
+% --------------------
+\subsection{Matchings}
+% --------------------
+
+% -----------------------------
+\paragraph{Übung 10: Aufgabe 1}
+% -----------------------------
+Gegeben sei folgender Graph und das Matching
+\begin{equation*}
+  M=\{\{h,f\},\{c,e\},\{a,d\}\}
+\end{equation*}
+
+% -----------------------------
+\paragraph{Übung 10: Aufgabe 2}
+% -----------------------------
+Bestimmen Sie die Anzahl der perfekten Matchings in folgenden Graphen:
+
+% -----------------------------------
+\subsection{Euler- und Hamiltonpfade}
+% -----------------------------------
+
+% -----------------------------
+\paragraph{Übung 10: Aufgabe 3}
+% -----------------------------
+Zeichnen Sie den Graph $G=(V,E)$
+\begin{enumerate}[a)]
+  \item Enthält $G$ einen Eulerweg bzw. einen Eulerkreis?
+  \item Enthält $G'$ einen Eulerweg bzw. einen Eulerkreis?
+  \item Enthält $G''$ einen Eulerweg bzw. einen Eulerkreis?
+\end{enumerate}
+
+% -----------------------------
+\paragraph{Übung 10: Aufgabe 4}
+% -----------------------------
+Beweisen Sie, dass ein Graph $G=(V,E)$ mit $d_u=2$ einen Eulerweg, aber
+keinen Eulerkreis hat.
+
+% -----------------------------
+\paragraph{Übung 10: Aufgabe 5}
+% -----------------------------
+\begin{enumerate}[a)]
+  \item Beweisen Sie: $K_n$ besitzt für $n\geq3$ einen Hamiltonkreis.
+  \item Sei $G$ ein Graph mit $n\geq3$ Knoten. Wie viele Kanten muss $G$
+        mindestens enthalten, damit $G$ auf jeden Fall einen Hamiltonkreis
+        besitzt?
+\end{enumerate}
+
+% ---------------------------
+\section{Monoide und Gruppen}
+% ---------------------------
+
+% -----------------------------
+\paragraph{Übung 11: Aufgabe 1}
+% -----------------------------
+Beweisen Sie: Ist $(G,\circ)$ eine Gruppe und $a,b\in G$, so gibt es ein
+eindeutiges $c\in G$ mit $a\circ c=b$.
+
+% -----------------------------
+\paragraph{Übung 11: Aufgabe 2}
+% -----------------------------
+Beweisen oder widerlegen Sie die folgenden Aussagen: In jeder Gruppe
+$(G,\circ)$ mit neutralem Element $e$ gilt für alle $a,b\in G$
+
+% -----------------------------
+\paragraph{Übung 11: Aufgabe 3}
+% -----------------------------
+Zeigen Sie, dass es eine Gruppe $G$ und Elemente $a,b\in G$ gibt, so
+dass die Gleichung $(ab)^{-1}=a^{-1}b^{-1}$ nicht erfüllt ist.
+
+% -----------------------------
+\paragraph{Übung 11: Aufgabe 4}
+% -----------------------------
+Geben Sie die Verknüpfungstabellen der folgenden Monoide an und bestimmen
+Sie, welches Monoid eine Gruppe ist:
+
+% -----------------------------
+\paragraph{Übung 11: Aufgabe 7}
+% -----------------------------
+\begin{enumerate}[a)]
+  \item Geben Sie alle Untergruppen der folgenden Gruppen an:
+        \begin{enumerate}[i)]
+          \item $S_3$
+          \item $(\mathbb{Z}_8,+)$
+        \end{enumerate}
+  \item Finden Sie, falls möglich, zu den beiden Gruppen je zwei
+        Untergruppen, deren Vereinigung keine Untergruppe ist.
+\end{enumerate}
+
+% -----------------------------
+\paragraph{Übung 11: Aufgabe 8}
+% -----------------------------
+Zeigen Sie, dass jede Untergruppe einer unendlichen zyklischen Gruppe selbst zyklisch ist.
+
+% -----------------------------
+\paragraph{Übung 12: Aufgabe 1}
+% -----------------------------
+Es seien $K$ und $L$ zwei Untergruppen einer endlichen Gruppe $(G,\circ)$.
+Beweisen oder widerlegen Sie:
+\begin{enumerate}[a)]
+  \item
+  \item
+\end{enumerate}
+
+% -----------------------------
+\paragraph{Übung 12: Aufgabe 2}
+% -----------------------------
+Sei $(G, \circ)$ eine Gruppe und $U$ eine Untergruppe von $G$. Zeigen Sie, dass
+$U$ genau dann ein Normalteiler ist, wenn für alle $a\in G$ die Gleichung
+$a\circ U=U\circ a$ gilt, also wenn Links- und Rechtsnebenklassen von $U$
+übereinstimmen.
+
+% -----------------------------
+\paragraph{Übung 12: Aufgabe 3}
+% -----------------------------
+Zeigen Sie, dass für alle $n\in\mathbb{N}\setminus\{0\}$ die Gruppe
+$(Z,+)/n\mathbb{Z}$ isomorph ist zu $(Z_n, +_n)$.
+
+% ---------------------
+\section{Zahlentheorie}
+% ---------------------
+
+% -----------------------------
+\paragraph{Übung 11: Aufgabe 5}
+% -----------------------------
+Berechnen Sie:
+\begin{equation*}
+  \text{a) }5^{40}\bmod3
+  \qquad
+  \text{b) }(77\cdot34)+(85\cdot44)\bmod4
+  \qquad
+  \text{c) }2^{3^4}\bmod5
+\end{equation*}
+
+% -----------------------------
+\paragraph{Übung 11: Aufgabe 6}
+% -----------------------------
+Beweisen Sie: $(a+b)^5\equiv a^5+b^5\bmod5$ für alle $a,b\in\mathbb{Z}$.
+
+% -----------------------------
+\paragraph{Übung 11: Aufgabe 8}
+% -----------------------------
+Zeigen Sie, dass
+\begin{equation*}
+  \varphi:(\mathbb{Z},+)\rightarrow(m\mathbb{Z},+)\quad\text{mit}\quad\varphi(x)=mx
+\end{equation*}
+für $m\in\mathbb{N}\setminus\{0\}$ ein Isomorphismus ist.
+
+% -----------------------------
+\paragraph{Übung 12: Aufgabe 4}
+% -----------------------------
+Beweisen Sie, dass für jeden Homomorphismus $\varphi:G_1\rightarrow G_2$
+zwischen zwei endlichen Gruppen folgende Gleichung gilt:
+\begin{equation*}
+  |G_1|=|\ker(\varphi)|\cdot|\operatorname{im}(\varphi)|
+\end{equation*}
+
+% ------------------------------
+\subsection{RSA-Verschlüsselung}
+% ------------------------------
+
+% ---------------------------
+\subsection{Fibonacci-Zahlen}
+% ---------------------------
+
+% ------------------------------------------------------------------------------
+\end{document}
+% ------------------------------------------------------------------------------
